@@ -1,0 +1,87 @@
+{
+ "checked": "2026-11-26T18:36:00Z",
+ "notices": {
+  "2026/11/2026-11-18-take-two-2.md": {
+   "date": "2026-11-18",
+   "firstRecorded": "2026-11-26T18:35:57Z",
+   "named": 18,
+   "namedOwners": 18,
+   "path": "2026/11/2026-11-18-take-two-2.md",
+   "posted": "2026-11-18T22:05:51Z",
+   "projects": [],
+   "sameName": [],
+   "sameOwner": [],
+   "statedForks": 16,
+   "statedNetwork": null
+  },
+  "2026/11/2026-11-18-take-two-3.md": {
+   "date": "2026-11-18",
+   "firstRecorded": "2026-11-26T18:35:58Z",
+   "named": 3,
+   "namedOwners": 1,
+   "path": "2026/11/2026-11-18-take-two-3.md",
+   "posted": "2026-11-18T22:09:06Z",
+   "projects": [],
+   "sameName": [],
+   "sameOwner": [],
+   "statedForks": null,
+   "statedNetwork": null
+  },
+  "2026/11/2026-11-18-take-two-4.md": {
+   "date": "2026-11-18",
+   "firstRecorded": "2026-11-26T18:35:59Z",
+   "named": 1,
+   "namedOwners": 1,
+   "path": "2026/11/2026-11-18-take-two-4.md",
+   "posted": "2026-11-18T22:17:38Z",
+   "projects": [],
+   "sameName": [],
+   "sameOwner": [],
+   "statedForks": 349,
+   "statedNetwork": null
+  },
+  "2026/11/2026-11-18-take-two.md": {
+   "date": "2026-11-18",
+   "firstRecorded": "2026-11-26T18:35:59Z",
+   "named": 1,
+   "namedOwners": 1,
+   "path": "2026/11/2026-11-18-take-two.md",
+   "posted": "2026-11-18T21:55:08Z",
+   "projects": [],
+   "sameName": [],
+   "sameOwner": [],
+   "statedForks": 263,
+   "statedNetwork": null
+  },
+  "2026/11/2026-11-24-take-two.md": {
+   "date": "2026-11-24",
+   "firstRecorded": "2026-11-26T18:36:00Z",
+   "named": 1,
+   "namedOwners": 1,
+   "path": "2026/11/2026-11-24-take-two.md",
+   "posted": "2026-11-24T18:24:53Z",
+   "projects": [],
+   "sameName": [
+    1469441675,
+    1469571854,
+    1469860994,
+    1469893123,
+    1469945250,
+    1470068074,
+    1471099485,
+    1471197635,
+    1471527111,
+    1471988924,
+    1471990288,
+    1472265554,
+    1472873722,
+    1473244254,
+    1473309068
+   ],
+   "sameOwner": [],
+   "statedForks": 2900,
+   "statedNetwork": 3007
+  }
+ },
+ "repository": "github/dmca"
+}
