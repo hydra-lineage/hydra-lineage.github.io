@@ -1,0 +1,117 @@
+{
+ "generated": "2026-11-28T15:50:47Z",
+ "start": "2026-11-20T00:00:00Z",
+ "bins": 208,
+ "seedCount": 83,
+ "unavailable": 13,
+ "forkNetworkFound": 517,
+ "gone": 20,
+ "projects": 236,
+ "recorded": 281,
+ "excluded": 45,
+ "minOwnChanges": 2,
+ "owners": 231,
+ "roots": 38,
+ "maxDepth": 8,
+ "commits": 75527,
+ "mergeCommits": 20089,
+ "changes": 47336,
+ "travelled": 9035,
+ "travelled2": 3754,
+ "travelled5": 1009,
+ "twoHop": 393,
+ "maxReach": 19,
+ "events": 20835,
+ "mirrored": 74631,
+ "sameOwnerEvents": 134,
+ "eventsByMode": {
+  "sync": 74631,
+  "reapply": 766,
+  "merge": 20069
+ },
+ "pairs": 875,
+ "givers": 136,
+ "takers": 119,
+ "both": 94,
+ "lagMedianH": 13.6,
+ "lagQ1H": 3.2,
+ "lagQ3H": 39.2,
+ "lagHist": [
+  2485,
+  2545,
+  2055,
+  2817,
+  3449,
+  3533,
+  3951
+ ],
+ "lagEdges": [
+  1,
+  3,
+  6,
+  12,
+  24,
+  48
+ ],
+ "lagBasis": 20835,
+ "agentChanges": 14161,
+ "agentShare": 29.9,
+ "agentFamilies": {
+  "Claude": 13611,
+  "Copilot": 60,
+  "Codex": 193,
+  "Cursor": 177,
+  "Other agent": 120
+ },
+ "agentProjects": 154,
+ "agentTakenShare": 26.8,
+ "plainTakenShare": 15.8,
+ "convergentPatches": 348,
+ "new24": 5945,
+ "newPrev24": 8453,
+ "adopt24": 9211,
+ "adoptPrev24": 2141,
+ "active24": 119,
+ "reachHist": [
+  [
+   1,
+   5281
+  ],
+  [
+   2,
+   1126
+  ],
+  [
+   3,
+   578
+  ],
+  [
+   4,
+   1041
+  ],
+  [
+   5,
+   258
+  ],
+  [
+   6,
+   194
+  ],
+  [
+   7,
+   179
+  ],
+  [
+   8,
+   162
+  ],
+  [
+   9,
+   67
+  ],
+  [
+   10,
+   149
+  ]
+ ]
+}
