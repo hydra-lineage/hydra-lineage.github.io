@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hydra is a research study of how changes move between independent, AI-assisted open-source projects.">
+  <title>Hydra · How work moves between independent projects</title>
+  <link rel="icon" href="assets/hydra.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css?v=573075f4d4">
+  <script defer src="data/hydra.js?v=45cc76ac0f"></script>
+  <script defer src="assets/explore.js?v=b62c2e44b7"></script>
+  <script defer src="assets/app.js?v=ffe3b7f097"></script>
+  <script async src="data/changes.js?v=bd2f2d3e2e" onload="window.__hydraChangesReady && window.__hydraChangesReady()"></script>
+</head>
+<body>
+  <header class="top wrap">
+    <a class="brand" href="index.html"><img src="assets/hydra.svg" alt="" width="26" height="26">Hydra</a>
+    <nav><a href="index.html" aria-current="page">Lineage</a><a href="paper.html">Research paper</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <h1>How work moves between independent projects</h1>
+      <p class="lede" id="lede"></p>
+      <p class="stamp" id="stamp"></p>
+    </section>
+
+    <section class="tiles" id="tiles" aria-label="Headline figures"></section>
+
+    <section aria-labelledby="lineage-title">
+      <div class="section-head"><div>
+        <h2 id="lineage-title">Lineage</h2>
+        <p class="sub">Each row is a project, branching from the project it was founded on. Strips are changes taken from its own line; curves are exchanges between lines.</p>
+      </div></div>
+      <div class="controls toolbar" id="controls">
+        <div class="finder">
+          <input id="find" type="search" placeholder="Find a project" role="combobox" aria-label="Find a project" aria-controls="find-list" aria-expanded="false" autocomplete="off">
+          <div id="find-list" class="find-list" role="listbox" hidden></div>
+        </div>
+        <label class="pick">Curves
+          <select id="curves">
+            <option value="between" selected>Between lines</option>
+            <option value="all">All take-ups</option>
+            <option value="mirror">All, with mirrored history</option>
+          </select>
+        </label>
+        <label class="pick">Rows
+          <select id="rows">
+            <option value="exchange">Gave or took changes</option>
+            <option value="active">Have changes of their own</option>
+            <option value="all">All projects</option>
+          </select>
+        </label>
+        <label class="pick">Time
+          <select id="range">
+            <option value="all">Whole study</option>
+            <option value="72" selected>Last 3 days</option>
+            <option value="24">Last 24 hours</option>
+          </select>
+        </label>
+        <span class="tb-gap"></span>
+        <label class="pick"><input type="checkbox" id="isolate" checked> Isolate selection</label>
+        <button type="button" class="soft" id="fold-all">Collapse families</button>
+        <button type="button" class="soft" id="clear" hidden>Clear selection</button>
+      </div>
+      <p class="selinfo" id="lineage-sel" hidden></p>
+      <div class="lineage-frame">
+        <div class="lineage-scroll" id="lineage-scroll" tabindex="0" aria-label="Project lineage over time"><div id="lineage" class="lg"></div></div>
+        <div class="legend lg-legend" aria-hidden="true">
+          <span><svg width="14" height="14"><circle cx="7" cy="7" r="3.2" class="birth"/></svg>Repository created</span>
+          <span><svg width="16" height="14"><rect x="2" y="2" width="3" height="10" rx="1" class="act"/><rect x="7" y="5" width="3" height="4" rx="1" class="act"/><rect x="12" y="4" width="3" height="6" rx="1" class="act"/></svg>Own changes per hour</span>
+          <span><svg width="18" height="14"><rect x="1" y="6" width="16" height="3" rx="1.5" class="intake"/></svg>Took changes from its own line</span>
+          <span><svg width="18" height="14"><path d="M14 2C6 2 6 12 14 12" class="arc k-s" style="opacity:1" stroke-width="1.8"/><circle cx="14" cy="12" r="2.6" class="end k-s" style="opacity:1"/></svg>From another line in the family</span>
+          <span><svg width="18" height="14"><path d="M14 2C6 2 6 12 14 12" class="arc k-x" style="opacity:1" stroke-width="1.8"/><circle cx="14" cy="12" r="2.6" class="end k-x" style="opacity:1"/></svg>From another family</span>
+          <span><svg width="18" height="14"><path d="M14 2C6 2 6 12 14 12" class="arc k-b" style="opacity:1" stroke-width="1.8"/><circle cx="14" cy="12" r="2.6" class="end k-b" style="opacity:1"/></svg>Back up the line</span>
+          <span><svg width="18" height="14"><path d="M14 2C6 2 6 12 14 12" class="arc k-d" style="opacity:1" stroke-width="1.8"/><circle cx="14" cy="12" r="2.6" class="end k-d" style="opacity:1"/></svg>Down its own line</span>
+          <span><svg width="18" height="14"><path d="M1 7H17" class="arc k-s re" style="opacity:1" stroke-width="1.8"/></svg>Re-applied</span>
+          <span><svg width="16" height="14"><path d="M2 3Q8 3 8 9L8 13" class="branch" style="opacity:1"/></svg>Founded on the row above</span>
+          <span><svg width="14" height="14"><path class="notice-mark" d="M3 3h8l-4 7z"/></svg>Takedown notice posted</span>
+          <span><svg width="14" height="14"><path d="M3.5 3.5l7 7m0-7l-7 7" class="gone"/></svg>No longer public</span>
+        </div>
+      </div>
+      <p class="note" id="lineage-note"></p>
+    </section>
+
+    <section aria-labelledby="explore-title">
+      <div class="section-head"><div>
+        <h2 id="explore-title">Explore the data</h2>
+      </div></div>
+      <div id="explore"></div>
+    </section>
+
+    <section aria-labelledby="rates-title">
+      <div class="section-head"><div>
+        <h2 id="rates-title">Pace and sources</h2>
+        <p class="sub">All times UTC.</p>
+      </div></div>
+      <div class="charts">
+        <figure><figcaption><strong>New changes</strong> per three hours, across all projects</figcaption><div id="chart-new" class="chart"></div></figure>
+        <figure><figcaption><strong>Changes taken up by another owner</strong> per three hours, merged or re-applied</figcaption><div id="chart-adopt" class="chart"></div></figure>
+        <figure><figcaption><strong>Time from first appearance to take-up</strong>, share of take-ups</figcaption><div id="chart-lag" class="chart"></div></figure>
+        <figure><figcaption><strong>Whose work travels</strong>, other owners reached</figcaption><div id="chart-givers" class="hbars"></div></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap foot">
+    <span>Hydra</span>
+    
+  </footer>
+  <div id="tip" class="tip" hidden></div>
+</body>
+</html>
